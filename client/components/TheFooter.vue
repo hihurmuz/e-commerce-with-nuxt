@@ -4,8 +4,8 @@
           <div class="infoArea">
               <div class="rowOne">
                   <span class="brandHeader">Udemy Shop</span>
-                  <p class="infoText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, adipisci quo excepturi saepe alias quam ex odio, maxime tempora nam minus ratione. Totam cumque cupiditate aliquid quis itaque commodi vero.</p>
-                  <span class="phoneText">Phone : +90 000 000 0000</span>
+                  <p class="infoText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, adipisci quo excepturi saepe alias quam ex odio.</p>
+                  <span class="phoneText">Phone : +90 000 000 0000</span> <br>
                   <span>help@udemyshop.com</span> <br>
                   <img class="imgInstagram" src="https://www.transparentpng.com/thumb/logo-instagram/hF2oFI-best-logo-instagram-png.png" alt="Best Logo Instagram PNG @transparentpng.com">
                   <img class="imgInstagram" src="https://www.transparentpng.com/thumb/logo-instagram/hF2oFI-best-logo-instagram-png.png" alt="Best Logo Instagram PNG @transparentpng.com">
@@ -49,8 +49,8 @@ export default {
 .footerContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: fixed;
+    align-items: center;    
+    width: 100%;
     left: 0;
     bottom: 0;    
     background-color: #333C35;
