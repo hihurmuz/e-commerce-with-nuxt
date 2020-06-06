@@ -7,7 +7,7 @@
         <!-- Navbar dropdowns -->
         <b-nav-item-dropdown text="Product" right>
             <b-dropdown-item href="/product/create">Create</b-dropdown-item>
-            <b-dropdown-item href="#">Delete</b-dropdown-item>
+            <b-dropdown-item href="/product/delete">Delete</b-dropdown-item>
             <b-dropdown-item href="/product/update">Update</b-dropdown-item>
             <b-dropdown-item href="#">All</b-dropdown-item>
         </b-nav-item-dropdown>
