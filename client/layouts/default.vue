@@ -1,16 +1,16 @@
 <template>
   <div>
-    <UnregisterdUserNavbar/>
+    <TheNavbar/>
     <nuxt />
     <TheFooter/>
   </div>
 </template>
 <script>
-import UnregisterdUserNavbar from "../components/UnregisteredUserNavbar"
+import TheNavbar from "../components/TheNavbar"
 import TheFooter from "../components/TheFooter"
 export default {
   components:{
-    UnregisterdUserNavbar,
+    TheNavbar,
     TheFooter
   }
 }
