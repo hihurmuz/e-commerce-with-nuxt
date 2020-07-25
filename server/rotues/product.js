@@ -3,21 +3,35 @@ const Product = require("../models/product");
 
 router.post("/product", async (req,res)=>{
   try {
-      let product = new Product();
-      product.title = req.body.title;
-      product.price = req.body.price;
-      product.stockNumber =  req.body.stockNumber;
-      product.description= req.body.description;
-      product.photo = req.body.photo;
-      product.mainCategory = req.body.mainCategory;
-      product.subCategory = req.body.subCategory;
+      if(req.body.multiData){
+        Product.insertMany(req.body.multiData, (err) =>{
+            if(err){
+                res.send(err)
+            }else{
+                res.json({
+                    success:true,        
+                    message:"products are saved succesfully ..",
+                    products: req.body.multiData
+                });
+            }
+        })
+      } else{
+        let product = new Product();
+        product.title = req.body.title;
+        product.price = req.body.price;
+        product.stockNumber =  req.body.stockNumber;
+        product.description= req.body.description;
+        product.photo = req.body.photo;
+        product.mainCategory = req.body.mainCategory;
+        product.subCategory = req.body.subCategory;
 
-      await product.save();
-      res.json({
-        success:true,        
-        message:"product is saved succesfully ..",
-        product:product
-    });
+        await product.save();
+        res.json({
+            success:true,        
+            message:"product is saved succesfully ..",
+            product:product
+        });
+      }      
   } catch (error) {
     res.status(500).json({
         success:false,

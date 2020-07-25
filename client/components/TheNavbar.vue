@@ -115,7 +115,6 @@ export default {  // <b-button class="mt-3" block @click="$bvModal.hide('bv-moda
   },
   methods: {
     async userSignUp(){
-      console.log("tıklandı ....");
       
       try {
         let userData={
