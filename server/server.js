@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 
 const productRoutes = require("./rotues/product");
 const userMethods = require("./rotues/authenticaton")
+const categoryRoutes = require("./rotues/category")
 
 const app= express();
 
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({extends:false}));
 
 app.use("/api",productRoutes);
 app.use("/api",userMethods);
+app.use("/api",categoryRoutes);
 
 dotenv.config();
 
